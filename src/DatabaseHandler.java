@@ -245,9 +245,7 @@ public class DatabaseHandler {
         return passengers;
     }
 
-    /**
-     * Gets passengers for a specific flight
-     */
+   
     public List<String[]> getPassengersByFlightId(int flightId) {
         List<String[]> passengers = new ArrayList<>();
         String sql = "SELECT name, passportNumber, contactNumber, email "
@@ -269,10 +267,7 @@ public class DatabaseHandler {
         }
         return passengers;
     }
-
-    /**
-     * Example of a UNION query
-     */
+ 
     public List<String[]> getUnionExample() {
         List<String[]> result = new ArrayList<>();
         String sql = "SELECT flightId, flightName, source, destination FROM flights WHERE capacity > 50 "

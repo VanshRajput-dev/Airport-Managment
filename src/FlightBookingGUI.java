@@ -277,17 +277,15 @@ public class FlightBookingGUI {
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         return textField;
     }
-
     private JButton createStyledButton(String text, Color bgColor) {
         JButton button = new JButton(text);
         button.setFont(new Font("Segoe UI", Font.BOLD, 14));
         button.setBackground(bgColor);
-        button.setForeground(Color.WHITE);
+        button.setForeground(Color.BLACK);  // Changed from Color.WHITE to Color.BLACK
         button.setFocusPainted(false);
         button.setBorder(BorderFactory.createEmptyBorder(8, 15, 8, 15));
         return button;
     }
-
     private void updateFlightDropdown() {
         flightDropdown.removeAllItems();
         List<String[]> flights = dbHandler.getAllFlights();
